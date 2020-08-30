@@ -7,9 +7,9 @@ module('Acceptance | logging out', function(hooks) {
 
   test('visiting /teams and clicking logout ', async function(assert) {
     await visit('/teams');
-    await pauseTest(); // It's like debugger, if you dont want to import it youcan call it like: this.pauseTest();
+    // await pauseTest(); // It's like debugger, if you dont want to import it youcan call it like: this.pauseTest();
     assert.equal(currentURL(), '/teams');
-    await pauseTest();
+    // await pauseTest();
     await click('.team-sidebar__logout-button');
     assert.equal(currentURL(), '/login');
   });
