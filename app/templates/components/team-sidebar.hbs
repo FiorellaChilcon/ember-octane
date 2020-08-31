@@ -3,7 +3,7 @@
   <header class="team-sidebar__header text-white mb-2 mt-3 px-4 flex justify-between">
     <div class="flex-auto">
       <h1 class="team-sidebar__team-name font-semibold text-xl leading-tight mb-1 truncate">
-        LinkedIn
+        {{@team.name}}
       </h1>
 
       <div class="team-sidebar__current-user-indicator flex items-center mb-6">
@@ -46,9 +46,14 @@
   </nav>
 
   <footer class="mx-4 mb-2 text-white">
-    <LinkTo @route="login" @tagName="button"
+    {{!-- we can access the auth method direct from here --}}
+    <button {{on 'click' this.auth.logout}}
       class="text-white rounded bg-grey-dark hover:bg-red-darker p-2 team-sidebar__logout-button">
       Logout
-    </LinkTo>
+    </button>
+    {{!-- <LinkTo @route="login" @tagName="button"
+      class="text-white rounded bg-grey-dark hover:bg-red-darker p-2 team-sidebar__logout-button">
+      Logout
+    </LinkTo> --}}
   </footer>
 </section>
