@@ -1,14 +1,13 @@
 <!-- Channel -->
-<main class="flex-1 flex flex-col bg-white overflow-hidden channel">
+<ChatContainer @channel={{this.model}} as |messages channelAPI|>
   <ChannelHeader @title={{this.model.name}} @description={{this.model.description}} />
   {{!-- my own helper --}}
   {{format-timestamp "05-01-2019"}}
   <!-- Channel Message List -->
   <div class="py-4 flex-1 overflow-y-scroll channel-messages-list" role="list">
-    <Message />
-    <Message />
-    <Message />
+    {{#each messages as |message|}}
+    <Message @message={{message}} @delete={{fn channelAPI.deleteMessage message.id}} />
+    {{/each}}
   </div>
-
-  <ChannelFooter />
-</main>
+  <ChannelFooter @sendMessage={{channelAPI.createMessage}} />
+</ChatContainer>
