@@ -13,7 +13,7 @@ export default class LoginFormComponent extends Component {
   @tracked userId = null;
 
   get isDisabled() {
-  return !this.userId;
+    return !this.userId;
   }
 
   @action
@@ -25,7 +25,7 @@ export default class LoginFormComponent extends Component {
     e.preventDefault();
     const { target } = e;
     const val = target.querySelector('select').value;
-    // context issue @action is neccesary
+    // context issue @action is neccesary ^^ up
     this.auth.loginWithUserId(val);
   }
 }

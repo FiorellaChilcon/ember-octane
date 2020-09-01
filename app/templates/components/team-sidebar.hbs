@@ -38,11 +38,13 @@
       </button>
     </div>
 
-    <a href="/li/general" data-channel-id="general"
-      class="team-sidebar__channel-link py-1 px-4 text-white no-underline block opacity-75 bg-teal-dark">
+    {{#each @team.channels as |channel|}}
+    <LinkTo @route="teams.team.channel" @model={{channel.id}} data-channel-id={{channel.id}}
+      class="team-sidebar__channel-link py-1 px-4 text-white no-underline block opacity-75" @activeClass="bg-teal-dark">
       <span aria-hidden="true">#</span>
-      general
-    </a>
+      {{channel.name}}
+    </LinkTo>
+    {{/each}}
   </nav>
 
   <footer class="mx-4 mb-2 text-white">
@@ -51,8 +53,7 @@
       class="text-white rounded bg-grey-dark hover:bg-red-darker p-2 team-sidebar__logout-button">
       Logout
     </button>
-    {{!-- <LinkTo @route="login" @tagName="button"
-      class="text-white rounded bg-grey-dark hover:bg-red-darker p-2 team-sidebar__logout-button">
+    {{!-- <LinkTo @route="login" @tagName="button">
       Logout
     </LinkTo> --}}
   </footer>

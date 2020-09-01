@@ -1,9 +1,10 @@
 import Service from '@ember/service';
 import { inject as service } from '@ember/service';
 import Router from '@ember/routing/router';
+import { action } from '@ember/object';
 
 export default class MockAuthService extends Service {
-   /**
+  /**
    * @type {Router}
    */
   @service router;

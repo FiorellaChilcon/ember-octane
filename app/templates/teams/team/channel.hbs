@@ -1,6 +1,6 @@
 <!-- Channel -->
 <main class="flex-1 flex flex-col bg-white overflow-hidden channel">
-  <ChannelHeader @title="Frontend Chat" @description="CSS and JS chat" />
+  <ChannelHeader @title={{this.model.name}} @description={{this.model.description}} />
   {{!-- my own helper --}}
   {{format-timestamp "05-01-2019"}}
   <!-- Channel Message List -->

@@ -16,7 +16,7 @@ module('Acceptance | logging out', function (hooks) {
     this.owner.lookup('service:auth').currentUserId = '1';
     await visit('/teams/linkedin');
     // await pauseTest(); // It's like debugger, if you dont want to import it youcan call it like: this.pauseTest();
-    assert.equal(currentURL().startsWith('/teams'));
+    assert.ok(currentURL().startsWith('/teams'));
     // await pauseTest();
     await click('.team-sidebar__logout-button');
     assert.equal(currentURL(), '/login');
