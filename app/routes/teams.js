@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 import AuthService from 'shlack/services/auth';
-// import fetch from 'fetch';
+import fetch from 'fetch';
 
 // user will be kicked out of teams view if It's not logged in
 export default class TeamsRoute extends Route {

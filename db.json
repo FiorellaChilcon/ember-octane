@@ -456,6 +456,14 @@
       "userId": "1",
       "createdAt": 1556683077121,
       "id": 57
+    },
+    {
+      "teamId": "javascript",
+      "channelId": "funny",
+      "userId": "1",
+      "body": "hi",
+      "createdAt": 1599248725114,
+      "id": 58
     }
   ]
 }

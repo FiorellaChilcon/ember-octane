@@ -1,11 +1,14 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'shlack',
     environment,
     rootURL: '/',
     locationType: 'auto',
+    fastboot: {
+      hostWhitelist: [/localhost/],
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
