@@ -464,6 +464,14 @@
       "body": "hi",
       "createdAt": 1599248725114,
       "id": 58
+    },
+    {
+      "teamId": "linkedin",
+      "channelId": "recruiting",
+      "userId": "1",
+      "body": "hi",
+      "createdAt": 1599333267151,
+      "id": 59
     }
   ]
 }
